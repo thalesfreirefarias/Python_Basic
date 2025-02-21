@@ -10,7 +10,23 @@ Basic commands to use in Python
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
-
+### Day 1: Data loading:
+- Read CSV FILE
+  ```
+  df=pd.reead.csv('.csv')
+  ```
+-Read excel File
+```
+df= pd.read_excel('file.xlsx')
+```
+- Read SQL file
+```
+df=pd.read_sql('query_connection')
+```
+In the SQL query file, you should include what you're looking for, such as a filter, e.g., SELECT * FROM my_table WHERE condition. For the connection, you should use the SQL connection, like this:
+```
+connection = sqlite3.connect('my_database.db')
+```
 
 
 ### Adjustments and improvements.
