@@ -39,13 +39,22 @@ df.tail()
 ```
 ### Data Types
 ```
-df.Types()
+df.Types
 ```
 ###Summary Statistic
+including:
+mean, standard deviation, minimum, maximum, and percentiles for numerical columns.
 ```
 df.Describe()
 ```
 ### Display Index, Columns, Data
+general overview of the DataFrame, including:
+Total number of entries (rows)
+Column names
+Number of non-null values in each column
+Data types of each column
+Memory usage
+
 ```
 df.info()
 ```
