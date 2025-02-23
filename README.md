@@ -13,7 +13,7 @@ Basic commands to use in Python
 ### Day 1: Data loading:
 - Read CSV FILE
   ```
-  df=pd.reead.csv('.csv')
+  df=pd.read_csv('.csv')
   ```
 -Read excel File
 ```
@@ -26,6 +26,28 @@ df=pd.read_sql('query_connection')
 In the SQL query file, you should include what you're looking for, such as a filter, e.g., SELECT * FROM my_table WHERE condition. For the connection, you should use the SQL connection, like this:
 ```
 connection = sqlite3.connect('my_database.db')
+```
+
+### Day 2 Data inspection
+### Top Rows (Display)
+```
+df.head()
+```
+### Bottom Rows(Display)
+```
+df.tail()
+```
+### Data Types
+```
+df.Types()
+```
+###Summary Statistic
+```
+df.Describe()
+```
+### Display Index, Columns, Data
+```
+df.info()
 ```
 
 
