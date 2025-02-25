@@ -59,6 +59,29 @@ Memory usage
 df.info()
 ```
 
+### Day 3 Data Cleaning
+
+### Check for missing values
+```
+df.isnull().sum()
+```
+### fill Missing values
+```
+df.fillna(value)
+```
+### Drop Missing Values
+```
+df.dropna()
+```
+### Rename Columns
+```
+df.rename(columns ={'old_name': 'new_name'})
+```
+### Drop Column
+```
+df.drop(columns=['columns_name'])
+```
+
 
 ### Adjustments and improvements.
 
