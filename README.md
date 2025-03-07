@@ -82,6 +82,48 @@ df.rename(columns ={'old_name': 'new_name'})
 df.drop(columns=['columns_name'])
 ```
 
+### Day 4 Data Transformation
+
+```
+### Applies a function to each value in the "column"
+df['column'].apply(lambda:function(x))
+df = pd.DataFrame({'column': [1, 2, 3, 4]})
+df['new_column'] = df['column'].apply(lambda x: x * 2)
+```
+
+```
+### Groupby and Aggegate
+df.groupby('column').agg({'column':'sum'})
+```
+
+```
+###Pivot tables- > Calculates the mean of columns2 for each unique value in columns1.
+df.pivot_table(index='columns1'.values='columns2'.aggfunc='mean')
+result = df.pivot_table(index='category', values='values', aggfunc='mean')
+```
+
+```
+### Merge Dataframes -> Function combines two DataFrames (df1 and df2) based on a common column.
+pd.merge(df1,df2, on = 'column')
+
+df1 = pd.DataFrame({'column': [1, 2, 3], 'values1': ['A', 'B', 'C']})
+df2 = pd.DataFrame({'column': [2, 3, 4], 'values2': ['X', 'Y', 'Z']})
+
+result = pd.merge(df1, df2, on='column')
+
+## excludes 1 and 4 because don't have a common column
+```
+
+```
+###Concateate Dataframes
+pd.concat([df1,df2])
+
+result = pd.merge(df1, df2, on='customer_id', how='left')
+how-> inner( just with values), outer(fill when NaN,right
+```
+
+```
+```
 
 ### Adjustments and improvements.
 
