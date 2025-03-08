@@ -122,7 +122,45 @@ result = pd.merge(df1, df2, on='customer_id', how='left')
 how-> inner( just with values), outer(fill when NaN,right
 ```
 
+### Day 5 Data Transformation
+
 ```
+###Histogram
+df['column'].hist()
+or
+import matplotlib.pyplot as plt
+
+df['column'].hist(bins=20, edgecolor='black')
+plt.xlabel('Valores')
+plt.ylabel('Frequência')
+plt.title('Histograma da coluna')
+plt.show()
+```
+
+```
+###boxplot
+df.boxplot(column=['column1', 'column2'])
+```
+
+```
+###Scatter plot
+df.plot.scatter(x='col1', y='col2')
+```
+
+```
+###Line plot
+df = pd.DataFrame(data)
+df.plot.line()
+plt.title('Gráfico de Linhas de Exemplo')
+plt.xlabel('Índice')
+plt.ylabel('Valores')
+plot.show()
+```
+
+```
+###Bar chart
+df['column'].value.counts().plot.bar()
+df['column'].value_counts().plot(kind='bar', color='skyblue', edgecolor='black')
 ```
 
 ### Adjustments and improvements.
