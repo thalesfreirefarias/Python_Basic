@@ -163,6 +163,30 @@ df['column'].value.counts().plot.bar()
 df['column'].value_counts().plot(kind='bar', color='skyblue', edgecolor='black')
 ```
 
+### Day 6 Statistical Analysis
+```
+###correlation Matrix
+df.corr()
+```
+
+```
+###covariance matrix
+df.cov()
+```
+
+```
+###Value counts
+df['column'}.value_counts()
+```
+
+```
+df['column'].unique()
+```
+
+```
+df['column'].nunique()
+```
+
 ### Adjustments and improvements.
 
 The project is still under development, and the upcoming updates will focus on the following tasks:
