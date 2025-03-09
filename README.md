@@ -22,10 +22,8 @@ df= pd.read_excel('file.xlsx')
 - Read SQL file
 ```
 df=pd.read_sql('query_connection')
-```
-In the SQL query file, you should include what you're looking for, such as a filter, e.g., SELECT * FROM my_table WHERE condition. For the connection, you should use the SQL connection, like this:
-```
-connection = sqlite3.connect('my_database.db')
+###In the SQL query file, you should include what you're looking for, such as a filter, e.g., SELECT * FROM my_table WHERE condition. For the connection, you should use the SQL connection, like this:
+###connection = sqlite3.connect('my_database.db')
 ```
 
 ### Day 2 Data inspection
@@ -39,14 +37,18 @@ df.tail()
 ```
 ### Data Types
 ```
-df.Types
+df.dtypes
+```
+
 ```
 ###Summary Statistic
 including:
 mean, standard deviation, minimum, maximum, and percentiles for numerical columns.
-```
 df.Describe()
 ```
+
+```
+df.info()
 ### Display Index, Columns, Data
 general overview of the DataFrame, including:
 Total number of entries (rows)
@@ -54,9 +56,6 @@ Column names
 Number of non-null values in each column
 Data types of each column
 Memory usage
-
-```
-df.info()
 ```
 
 ### Day 3 Data Cleaning
