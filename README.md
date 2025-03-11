@@ -66,7 +66,8 @@ df.isnull().sum()
 ```
 ### fill Missing values
 ```
-df.fillna(value)
+df = df.fillna(value)
+print(df)
 ```
 ### Drop Missing Values
 ```
@@ -186,6 +187,29 @@ df['column'].unique()
 df['column'].nunique()
 ```
 
+### Day 7 Indexing and Selection
+```
+### Select Column
+DF['column']
+```
+
+```
+###Select Multiple Columns
+DF.[['col1','col2']]
+```
+
+```
+###Select Rows by position
+DF.ILOC[0:5]
+```
+```
+###Select Rows by lobel
+DF.LOC[0:5]
+```
+```
+#Condition Selection
+DF[DF['column']>value]
+```
 ### Adjustments and improvements.
 
 The project is still under development, and the upcoming updates will focus on the following tasks:
