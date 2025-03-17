@@ -210,6 +210,26 @@ DF.LOC[0:5]
 #Condition Selection
 DF[DF['column']>value]
 ```
+
+### Day 8 Data Formatting and Conversion
+```
+###Convert Dataypes
+df[`column`].astype[`type`]
+```
+
+```
+###String Operations
+df[`column`].str.lower()
+```
+```
+###datetime conversion
+pf.to_datatime(df.[`column`])
+```
+```
+###setting Index
+df.set_index(`column`)
+```
+
 ### Adjustments and improvements.
 
 The project is still under development, and the upcoming updates will focus on the following tasks:
