@@ -87,19 +87,20 @@ df.drop(columns=['columns_name'])
 ```
 ### Applies a function to each value in the "column"
 df['column'].apply(lambda:function(x))
-df = pd.DataFrame({'column': [1, 2, 3, 4]})
-df['new_column'] = df['column'].apply(lambda x: x * 2)
+df['valor total']=df['Valor'].apply(lambda x: x*2)
+df
 ```
 
 ```
 ### Groupby and Aggegate
-df.groupby('column').agg({'column':'sum'})
+df.groupby('Categoria').agg({'Valor': 'sum'})
+
 ```
 
 ```
 ###Pivot tables- > Calculates the mean of columns2 for each unique value in columns1.
-df.pivot_table(index='columns1'.values='columns2'.aggfunc='mean')
-result = df.pivot_table(index='category', values='values', aggfunc='mean')
+
+df.pivot_table(index='Categoria', values='Valor', aggfunc='mean')
 ```
 
 ```
