@@ -153,14 +153,20 @@ df.plot.scatter(x='Valor',y='valor total')
 ```
 ###Line plot
 df.plot.line(x='Data', y='Valor')
+
+
 import pandas as pd
 import matplotlib.pyplot as plt
+
 # Criando o DataFrame
 df = pd.DataFrame(dados)
+
 # Criando o gráfico de linha
 df.plot.line(x='Data', y='Valor')
+
 # Adicionando título e rótulos
 plt.title('Gráfico de Linhas Data x valores')
+
 plt.xlabel('Datas')
 plt.ylabel('Valores')
 # Exibindo o gráfico
