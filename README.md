@@ -131,37 +131,67 @@ df['column'].hist()
 or
 import matplotlib.pyplot as plt
 
-df['column'].hist(bins=20, edgecolor='black')
+df['Valor'].hist(bins=20, edgecolor='black')
 plt.xlabel('Valores')
-plt.ylabel('Frequência')
-plt.title('Histograma da coluna')
+plt.ylabel('Quantidade')
+plt.title('Histograma de valores')
 plt.show()
 ```
 
 ```
 ###boxplot
 df.boxplot(column=['column1', 'column2'])
+df.boxplot(column=['Valor', 'valor total'])
 ```
 
 ```
 ###Scatter plot
 df.plot.scatter(x='col1', y='col2')
+df.plot.scatter(x='Valor',y='valor total')
 ```
 
 ```
 ###Line plot
-df = pd.DataFrame(data)
-df.plot.line()
-plt.title('Gráfico de Linhas de Exemplo')
-plt.xlabel('Índice')
+df.plot.line(x='Data', y='Valor')
+import pandas as pd
+import matplotlib.pyplot as plt
+# Criando o DataFrame
+df = pd.DataFrame(dados)
+# Criando o gráfico de linha
+df.plot.line(x='Data', y='Valor')
+# Adicionando título e rótulos
+plt.title('Gráfico de Linhas Data x valores')
+plt.xlabel('Datas')
 plt.ylabel('Valores')
-plot.show()
+# Exibindo o gráfico
+plt.show()
+
+
+
 ```
 
 ```
 ###Bar chart
 df['column'].value.counts().plot.bar()
 df['column'].value_counts().plot(kind='bar', color='skyblue', edgecolor='black')
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 6)) 
+
+df['Categoria'].value_counts().plot.bar()
+
+plt.title('Distribuição de Valores Totais')
+plt.xlabel('Categoria')
+plt.ylabel('Quantidade')
+
+plt.xticks(fontsize=9, rotation=45)  
+
+plt.show()
+
+
 ```
 
 ### Day 6 Statistical Analysis
