@@ -231,6 +231,26 @@ pf.to_datatime(df.[`column`])
 df.set_index(`column`)
 ```
 
+### Day 9 Advanced Data Transformation
+```
+### Lmabda Functions
+df.apply(lambda x:x+1
+```
+```
+### Pivot longer/under Format
+df.metlt(id_vars=['col1']
+```
+```
+###Sstack/unstack
+df.stack()
+df.unstack()
+```
+```
+### cross tabulations
+pd.crosstab(df['col1'],df['col2'])
+```
+### Day  10 handling time series data
+
 ### Adjustments and improvements.
 
 The project is still under development, and the upcoming updates will focus on the following tasks:
