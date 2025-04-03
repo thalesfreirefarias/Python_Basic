@@ -287,6 +287,26 @@ pd.crosstab(df['col1'],df['col2'])
 ```
 ### Day  10 handling time series data
 
+```
+###SET DATETIME INDEX... Transform one column to datetime
+df.set_index(pd.to_datetime(df['date']))
+df = df.set_index(pd.to_datetime(df['date']))
+```
+
+```
+###Resampling Data
+df.resamble('ME').mean()
+mes = df.resample('ME').mean(numeric_only=True)
+print(mes)
+```
+```
+###Rolling window Operation.. calcule the mean of the values
+df.rolling(window=5).mean()
+df_numeric = df.select_dtypes(include=['float64', 'int64'])
+mes = df_numeric.rolling(window=5).mean()
+print(mes)
+```
+
 ### Adjustments and improvements.
 
 The project is still under development, and the upcoming updates will focus on the following tasks:
