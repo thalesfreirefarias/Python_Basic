@@ -307,6 +307,33 @@ mes = df_numeric.rolling(window=5).mean()
 print(mes)
 ```
 
+
+### Day  File export
+
+```
+###write to CSV
+df.to_CSV('filename.csv')
+
+###If you want to download instead
+from google.colab import files
+df.to_csv('filename.csv', index=False)
+files.download('filename.csv')
+```
+
+
+```
+###write to Excel
+df.to_excel('filename.xls')
+```
+
+
+```
+###write to Database
+df.to_sql('table_name',connection)
+```
+
+
+
 ### Adjustments and improvements.
 
 The project is still under development, and the upcoming updates will focus on the following tasks:
