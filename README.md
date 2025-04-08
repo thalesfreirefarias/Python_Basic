@@ -308,7 +308,7 @@ print(mes)
 ```
 
 
-### Day  File export
+### Day 11  File export
 
 ```
 ###write to CSV
@@ -332,7 +332,37 @@ df.to_excel('filename.xls')
 df.to_sql('table_name',connection)
 ```
 
+### Day 12  Data exploration techniques
+```
+!pip install ydata-profiling
+###profile report with pandas profiling
+from pandas_profiling import ProfileReport
 
+profile = ProfileReport(df, title="Pandas Profiling Report", explorative=True)
+profile.to_notebook_iframe()
+```
+```
+###pairplot with seaborn
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Filter just numbers
+numeric_df = df.select_dtypes(include='number')
+
+# Create heatmap
+sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm')
+plt.show()
+
+
+```
+
+```
+###heatmap for correlation with seaborn
+# Using just numbers
+numeric_df = df.select_dtypes(include='number')
+sns.pairplot(numeric_df)
+
+```
 
 ### Adjustments and improvements.
 
