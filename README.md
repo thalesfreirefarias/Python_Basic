@@ -364,6 +364,21 @@ sns.pairplot(numeric_df)
 
 ```
 
+### Day 13  Data exploration techniques
+```
+###query function
+df.qyery('column>value')
+value = 90  # Define the variable first
+df.query('Valor > @value')  # Use @ to reference Python variables inside query
+
+```
+
+```
+###Filtering with isin
+df[df['column1'].isin([value1,value2)]]
+df[df['Categoria'].isin(['A', 'C'])]
+```
+
 ### Adjustments and improvements.
 
 The project is still under development, and the upcoming updates will focus on the following tasks:
